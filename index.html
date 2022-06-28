@@ -19,93 +19,234 @@
         background-color: #f0f0f0;
         border-radius: 50%;
       }
+
+      #logo {
+        background-image: url(Img/google_logo.svg);
+        height: 92px;
+        width: 272px;
+      }
+
+      #inputWrapper {
+        position: relative;
+        border: none;
+        border-radius: 44px;
+        height: 44px;
+        box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+        font-size: 16px;
+      }
+
+      input {
+        all: unset;
+      }
+
+      #voiceSearchButton {
+        background: url(Img/googlemic_clr_24px.svg) no-repeat center;
+        background-size: 21px 21px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        height: 100%;
+        outline: none;
+        padding: 0;
+        pointer-events: auto;
+        right: 16px;
+        width: 26px;
+      }
+
+      input[type="submit"] {
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: Apple SD Gothic Neo, arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      input[type="submit"]:hover {
+        border: 1px solid rgb(118, 118, 118);
+      }
+      a {
+        text-decoration: none;
+      }
+      .footerLink {
+        color: #70757a;
+        padding: 15px;
+        font-size: 14px;
+      }
     </style>
   </head>
   <body
     style="
       background-color: #ffffff;
       height: 100vh;
+      margin: 0;
       max-height: 100vh;
       color: rgba(0, 0, 0, 0.87);
       text-decoration: none;
       font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
       /* font-family: arial, sans-serif; */
     "
-  ></body>
-
-  <nav
-    style="
-      display: flex;
-      flex-direction: row;
-      align-content: center;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
-      align-items: center;
-    "
   >
-    <div class="nav-link">Gmail</div>
-    <div class="nav-link">이미지</div>
-    <div class="nav-img" style="width: 24px; height: 24px">
-      <svg
-        style="width: 24px"
-        class="gb_Ue"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="#000000de"
-          d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
-        ></path>
-      </svg>
-    </div>
-    <div class="nav-img" style="width: 32px; height: 32px">
-      <img
-        style="border-radius: 50%; width: 32px; height: 32px"
-        src="Img/profile.png"
-        alt=""
-      />
-    </div>
-  </nav>
-
-  <div>
-    <div
+    <nav
       style="
         display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        flex-direction: row;
         align-content: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         align-items: center;
       "
     >
-      <div>
-        <img src="Img/google_logo.svg" alt="" />
-      </div>
-      <!-- search bar -->
       <div style="display: flex">
-        <div>
+        <div class="nav-link" style="font-size: 14px">Google 정보</div>
+        <div class="nav-link" style="font-size: 14px">스토어</div>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          flex-wrap: nowrap;
+          justify-content: flex-end;
+          align-items: center;
+        "
+      >
+        <div class="nav-link">Gmail</div>
+        <div class="nav-link">이미지</div>
+        <div class="nav-img" style="width: 24px; height: 24px">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="#5F6368"
+            style="width: 24px"
+            class="gb_Ue"
+            focusable="false"
+            viewBox="0 0 24 24"
           >
             <path
-              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-            />
+              fill="#000000de"
+              d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
+            ></path>
           </svg>
         </div>
-        <div>
-          <input
-            id="input"
-            type="search"
-            autocomplete="off"
-            spellcheck="false"
-            role="combobox"
-            placeholder="Google 검색 또는 URL 입력"
-            aria-live="polite"
+        <div class="nav-img" style="width: 32px; height: 32px">
+          <img
+            style="border-radius: 50%; width: 32px; height: 32px"
+            src="Img/profile.png"
+            alt=""
           />
         </div>
       </div>
+    </nav>
+
+    <div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-content: center;
+          align-items: center;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            height: 200px;
+            min-height: var(height);
+            margin-bottom: 38px;
+            flex-direction: column;
+            justify-content: flex-end;
+          "
+        >
+          <div id="logo"></div>
+        </div>
+        <!-- search bar -->
+        <div
+          id="inputWrapper"
+          style="
+            width: 560px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+          "
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#5F6368"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+          </div>
+          <div>
+            <input
+              type="search"
+              autocomplete="off"
+              spellcheck="false"
+              role="combobox"
+              aria-live="polite"
+              style="border: none; min-width: 440px"
+            />
+          </div>
+          <div>
+            <button id="voiceSearchButton" title="음성 검색"></button>
+          </div>
+        </div>
+        <!-- buttons -->
+        <div style="height: 70px; padding-top: 18px">
+          <input value="Google 검색" role="button" type="submit" />
+          <input value="I'm Feeling Lucky" role="button" type="submit" />
+        </div>
+        <div style="color: #4d5156; display: inline-block; line-height: 28px">
+          Google 제공 서비스:
+          <a style="color: blue" href="#"> English</a>
+        </div>
+      </div>
     </div>
-  </div>
+
+    <footer
+      style="
+        position: absolute;
+        bottom: 0;
+        background-color: #f2f2f2;
+        color: #70757a;
+        width: 100%;
+      "
+    >
+      <div
+        style="
+          padding: 15px 30px;
+          border-bottom: 1px solid #dadce0;
+          font-size: 15px;
+          color: #70757a;
+        "
+      >
+        대한민국
+      </div>
+      <div
+        style="padding: 0 20px; display: flex; justify-content: space-between"
+      >
+        <div>
+          <a class="footerLink" href="#">광고</a>
+          <a class="footerLink" href="#">비즈니스</a>
+          <a class="footerLink" href="#">검색의 원리</a>
+        </div>
+        <div>
+          <a class="footerLink" href="#">개인청보처리방침</a>
+          <a class="footerLink" href="#">약관</a>
+          <a class="footerLink" href="#">설정</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
