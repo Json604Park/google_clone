@@ -1,0 +1,14 @@
+nav div {
+  padding: 6px;
+  margin: 4px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav-img:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
